@@ -72,7 +72,7 @@ void record::search()
 	char s[20];
 	ifstream ifile("record.txt");
 	cout<<"Enter name of donor to be searched: "<<endl;
-	gets(s);
+	cin>>s;
 	ifile.seekg(0, ios::beg);
 	ifile.read((char*)&c, sizeof(c));
 	while(ifile)
@@ -90,7 +90,7 @@ void record::del()
     ofstream ofile;
     ofile.open("new.txt", ios::app);
     puts("\nEnter name of the record whose record you want to delete: ");
-    gets(b);
+    cin>>b;
     ifile.seekg (0, ios::beg);
     ifile.read((char*)&c, sizeof(c));
     while(ifile)
