@@ -109,7 +109,7 @@ void record::mod()
 	char m[20];
 	int ch;
 	cout<<"\nEnter name of donor you want to modify: "<<endl;
-	gets(m);
+	cin>>m;
 	fstream f;
 	f.open("record.txt",ios::in|ios::out);
 	f.seekg(0, ios::beg);
@@ -124,7 +124,7 @@ void record::mod()
 			switch(ch)
 			{
 				case 1:
-					gets(name);
+					cin>>name;
 					break;
 				case 2:
 					cin>>gender;
